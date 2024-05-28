@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
-const BOOKS_URL = "http://openlibrary.org/search.json?title=";
+const BOOKS_URL = "https://openlibrary.org/search.json?title=";
 const AUTHOR_SEARCH_URL = "https://openlibrary.org/search/authors.json?q=";
 
 const fetchBooks = async (searchTerm) => {
