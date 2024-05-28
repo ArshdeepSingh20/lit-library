@@ -7,10 +7,10 @@ const AUTHOR_SEARCH_URL = "https://openlibrary.org/search/authors.json?q=";
 const fetchBooks = async (searchTerm) => {
     try {
         const headers = {
-            "User-Agent": "LitLibrary/1.0 (singharshdeep9039@gmail.com)"
+            "User-Agent": "LitLibrary/1.0 (singharshdeep9039gmail.com)"
         };
 
-        const response = await axios.get(`${BOOKS_URL}${searchTerm}`, { headers });
+        const response = await axios.get(`${BOOKS_URL}${searchTerm}` ,{ headers });
         const { docs } = response.data;
 
         if (docs) {
@@ -25,7 +25,7 @@ const fetchBooks = async (searchTerm) => {
                     subject = ["No Subject"],
                 } = bookSingle;
 
-                const authorSearchResponse = await axios.get(`${AUTHOR_SEARCH_URL}${author_name.join(" ")}`, { headers });
+                const authorSearchResponse = await axios.get(`${AUTHOR_SEARCH_URL}${author_name.join(" ")}`,{ headers });
                 const { docs: authorDocs } = authorSearchResponse.data;
                 const authorData = authorDocs.length > 0 ? authorDocs[0] : null;
 
@@ -57,7 +57,6 @@ const fetchBooks = async (searchTerm) => {
         return { books: [], resultTitle: "Failed to fetch books. Please try again later.", error };
     }
 };
-
 
 const fetchAuthorBirthDate = async (authorKey) => {
     try {

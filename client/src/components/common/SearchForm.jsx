@@ -19,7 +19,7 @@ const SearchForm = () => {
     } else {
       setSearchTerm(searchTerm);
     }
-    navigate("/");
+    navigate("/books-details");
   };
 
   return (
