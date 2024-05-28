@@ -30,7 +30,7 @@ function Dashboard() {
         </div>
         <div className="w-full sm:w-2/5">
           <img
-            src="/src/assets/dashboard.png"
+            src="https://cdn.builder.io/api/v1/image/assets%2Fd35037adcd734f2b8611cb90d5f362bb%2F2822e5e91dde4981bbf663a220d198de"
             alt="Dashboard"
             className="max-w-full h-auto"
           />

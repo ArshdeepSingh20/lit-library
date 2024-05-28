@@ -38,7 +38,7 @@ export default function Header() {
                   <Link to={"/"}>
                     <img
                       className="h-8 w-auto"
-                      src="/src/assets/logo.png"
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fd35037adcd734f2b8611cb90d5f362bb%2Fcae7f0eab6724a3cae855ea53e292b2c"
                       alt="LitLibrary"
                     />
                   </Link>
