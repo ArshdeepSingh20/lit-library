@@ -4,7 +4,11 @@ const AUTHOR_URL = "https://openlibrary.org/authors/";
 
 const fetchAuthorDetails = async (authorKey) => {
     try {
-        const response = await axios.get(`${AUTHOR_URL}${authorKey}.json`);
+        const headers = {
+            "User-Agent": "LitLibrary/1.0 (singharshdeep9039gmail.com)"
+        };
+
+        const response = await axios.get(`${AUTHOR_URL}${authorKey}.json`, { headers });
         console.log(response);
         const { birth_date, top_work } = response.data;
 

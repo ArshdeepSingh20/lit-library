@@ -6,7 +6,11 @@ const AUTHOR_SEARCH_URL = "https://openlibrary.org/search/authors.json?q=";
 
 const fetchBooks = async (searchTerm) => {
     try {
-        const response = await axios.get(`${BOOKS_URL}${searchTerm}`);
+        const headers = {
+            "User-Agent": "LitLibrary/1.0 (singharshdeep9039gmail.com)"
+        };
+
+        const response = await axios.get(`${BOOKS_URL}${searchTerm}` ,{ headers });
         const { docs } = response.data;
 
         if (docs) {
